@@ -1,0 +1,1237 @@
+/******************************************************************
+Site Name: NimbleBusiness	 
+Author: Dean M.
+
+Stylesheet: Base Mobile Stylesheet
+
+******************************************************************/
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body { 
+	font-family:$ubuntu; 
+	font-size: 100%; 
+	line-height: 1.5;
+	color: $reliantaDarkGray;
+	background-color: #ffffff;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+
+/********************
+WORDPRESS BODY CLASSES
+style a page via class
+********************/
+
+.rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
+.home {}                          /* home page */
+.blog {}                          /* blog template page */
+.archive {}                       /* archive page */
+.date {}                          /* date archive page */
+	.date-paged-1 {}                /* replace the number to the corresponding page number */
+.search {}                        /* search page */
+	.search-results {}              /* search result page */
+	.search-no-results {}           /* no results search page */
+	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
+.error404 {}                      /* 404 page */
+.single {}                        /* single post page */
+	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
+	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
+.attachment {}                    /* attatchment page */
+	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
+	.attachment-mime-type {}        /* style mime type pages */
+.author {}                        /* author page */
+	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
+	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
+.category {}                      /* category page */
+	.category-1 {}                  /* individual category page (i.e. body.category-6) */
+	.category-paged-1 {}            /* replace the number to the corresponding page number */
+.tag {}                           /* tag page */
+	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
+	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
+.page-template {}                 /* custom page template page */
+	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
+	.page-paged-1 {}                /* replace the number to the corresponding page number */
+	.page-parent {}                 /* parent page template */
+	.page-child {}                  /* child page template */
+	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
+.logged-in {}                     /* if user is logged in */
+.paged {}                         /* paged items like search results or archives */
+	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+    width:100%;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+#container {
+    min-width: 375px;
+}
+
+/*********************
+LINK STYLES
+*********************/
+
+a, a:visited {
+	color: $link-color;
+
+	/* on hover */
+	&:hover, &:focus {
+		color: $link-hover;
+	}
+
+	/* on click */
+	&:active {
+
+	}
+
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	text-rendering: optimizelegibility;
+	font-weight: 500;
+	/*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+	/* removing text decoration from all headline links */
+	a {
+		text-decoration: none;
+	}
+}
+
+h1, .h1 {
+	font-size: 44px;
+	line-height: 1.333em;
+}
+
+h2, .h2 {
+	font-size: 1.75em;
+	line-height: 1.4em;
+	margin-bottom: 0.375em;
+}
+
+h3, .h3 {
+	font-size: 26px;
+	color: $reliantaGreen;
+	font-weight:bold;
+	margin:0;
+}
+
+h4, .h4 {
+	font-size: 1.1em;
+	font-weight: 700;
+}
+
+h5, .h5 {
+	font-size: 0.846em;
+	line-height: 2.09em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+#single-content {
+    background-color: $reliantaLightGray;
+    padding-bottom: 200px;
+    min-height: 1071px;
+    article  {
+    	background-color: #fff;
+    	margin-top:-230px;
+    	section {
+		    padding: 0 30px;
+		    clear: both;
+    	}
+    }
+
+	header {
+		&.hero {
+			background-color: $reliantaDarkBlue;
+			min-height:375px;
+		}
+		.header-full {
+			width:100%;
+			padding-left:40px;
+		}
+		.header-left {
+			width: 50%;
+			height: 400px;
+			display: inline;
+			float: left;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 50% 100%;
+		}
+		.header-right {
+		    width: 50%;
+		    display: inline;
+		    float: left;
+		    border-bottom: 1px solid $reliantaLightGray;
+		    padding-left: 40px;
+   			height: 400px;
+		}
+		.post-social {
+			padding-bottom: 29px;
+		    margin-top: 40px;
+
+			div {
+				display:inline;
+			    margin-right: 5px;
+			}
+			
+			.section-title {
+				margin: 0;
+			}
+		}
+		h1 {
+			margin: 0;
+		    width: 70%;
+			    font-size:37px;
+		}
+		.post-section-title {
+			color: $reliantaGreen;
+			margin:0;
+			padding:0;
+		    padding-top: 70px;
+		}
+	}
+	.header-post-nav {
+		float: right;
+		padding: 2px;
+		.header-post-previous {
+			float: left;
+			width: 50px;			
+		}
+		.header-post-next {
+			float: left;
+			width: 50px;
+			margin-left: 2px;
+		}
+	}
+	.post-navigation {
+			margin-top:30px;
+			color: $reliantaMediumGray;
+		.post-previous {
+			float:left;
+			width:325px;
+			display:inline;
+		}
+		.post-next {
+			float:right;
+			width:325px;
+			display:inline;
+		    text-align: right;
+		}
+		a {
+			color:$reliantaGreen;
+			text-decoration:none;
+			text-transform: uppercase;
+			font-weight:bold;
+		}
+	}
+}
+
+.header {
+	overflow: hidden;
+	.banner {
+		float:left;
+		width:100%;
+	    text-transform: lowercase;	
+	    h1 {
+			margin: 0;
+			font-weight: bold;
+			color: white;
+			font-size: 34px;
+	    }
+	}
+	&.hero {
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		min-height: 500px;
+		background-size: cover;
+		background-position: -200px 0;
+		width: 100%;
+		h1 {
+			margin: 0;
+			font-weight: bold;
+			color: white;
+			font-size: 34px;
+			width: 350px;
+	    }
+		&.mobile-header {
+		    min-height: 428px;
+		    background-color:$reliantaDarkBlue;
+		    border-bottom: 10px solid #607f3f;
+		}
+	}
+	&.subpage {
+		max-height: 375px;
+		text-align:center;
+		h1 {
+			width:100%;
+		}
+		p {
+			color:#ffffff;
+		}		
+	}
+}
+
+#logo {
+    margin: .5em 0;
+    float: left;
+	a {
+		color: $white;
+	}
+}
+
+#inner-header {
+	&.mobile-inner {
+		background-color:$reliantaDarkBlue;
+	    min-height: 428px;
+	}
+	.mobile-logo {
+		position:relative;
+	}
+	.mobile-banner {
+		display:none;
+	}
+}
+
+.cta {
+}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+
+/*
+all navs have a .nav class applied via
+the wp_menu function; this is so we can
+easily write one group of styles for
+the navs on the site so our css is cleaner
+and more scalable.
+*/
+
+.burger {
+	background-image: url("../images/hamburger.png");
+	background-repeat: no-repeat;
+	height: 30px;
+	width:50px;
+	position: relative;
+	float: right;
+	top: 35px;
+    left: 20px;
+}
+.mobile-burger {
+	background-image: url("../images/close.png");
+}
+.header-social {
+	display:none;
+	&.mobile-social {
+	    display: block;
+	    position: relative;
+	    clear: both;
+	    text-align: center;
+	   	& > div {
+	    	display: inline;
+	    	margin: 0 10px;
+	    }
+	}
+}
+
+.burger {
+	display: block;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	height: 30px;
+	width:50px;
+	font-size: 0;
+	text-indent: -9999px;
+	appearance: none;
+	box-shadow: none;
+	border-radius: none;
+	border: none;
+	cursor: pointer;
+	transition: background 0.3s;
+;}
+
+.burger:focus {
+  outline: none;
+}
+
+.burger-close {
+  background-color: #transparent;
+}
+
+.burger-close span {
+  transition: background 0s 0.3s;
+}
+
+.burger-close span::before,
+.burger-close span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+
+.burger-close span::before {
+  transition-property: top, transform;
+}
+
+.burger-close span::after {
+  transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+.burger-close.is-active {
+ 
+}
+
+.burger-close.is-active span {
+  background: none;
+}
+
+.burger-close.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.burger-close.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.burger-close.is-active span::before,
+.burger-close.is-active span::after {
+  transition-delay: 0s, 0.3s;
+}
+
+
+
+/* Icon 3 */
+
+#hamburger span:nth-child(1) {
+  top: 0px;
+}
+
+#hamburger span:nth-child(2),#hamburger span:nth-child(3) {
+  top: 18px;
+}
+
+#hamburger span:nth-child(4) {
+  top: 36px;
+}
+
+#hamburger.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#hamburger.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#hamburger.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#hamburger.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+
+
+
+
+
+
+.nav {
+	display:none;
+	float: right;
+	margin-top: 3em;
+	&.mobile-nav {
+		display:block;
+		position: relative;
+		background-color: $reliantaDarkBlue;
+		width: 100%;
+	    margin: 0;
+		margin-bottom: 60px;
+		margin-top: 30px;
+	    text-align: center;  
+	 }
+	li {
+		text-transform: uppercase;
+		font-size: 12px;
+		font-weight: bold;
+		a {
+			display: block;
+			color: $white; 
+			text-decoration: none;
+			padding: 0.75em;
+			/*
+			remember this is for mobile ONLY, so there's no need
+			to even declare hover styles here, you can do it in
+			the style.scss file where it's relevant. We want to
+			keep this file as small as possible!
+			*/
+			&:hover, &:focus {
+			}
+		}
+
+		&:first-child {}
+		&:last-child {}
+		/*
+		so you really have to rethink your dropdowns for mobile.
+		you don't want to have it expand too much because the
+		screen is so small. How you manage your menu should
+		depend on the project. Here's some great info on it:
+		http://www.alistapart.com/articles/organizing-mobile/
+		*/
+		ul.sub-menu,
+		ul.children {
+			li {
+				a {
+					padding-left: 30px;
+					&:hover,
+					&:focus {}
+					&:link {}
+				}
+				&:first-child {}
+				&:last-child {}
+			}
+		}
+	} /* end .menu li */
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current_page_ancestor {
+		a {}
+	}  /* end current highlighters */
+} /* end .nav */
+
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+
+.cta {
+	float: left;	    
+    width:100%;
+    margin: 30px 0;
+    a {
+	    border: white 2px solid;
+	    border-radius: 5px;
+	    color: #ffffff;
+	    font-weight: bold;
+	    font-size: 16px;
+	    text-transform: uppercase;
+        padding: 10px 40px;
+	    color:#fff;
+	    text-decoration:none;
+    }
+}
+
+.primary-content {
+	background-color: $reliantaLightGray;
+	padding: 0 30px;
+	.primary-section {
+		padding: 5px 0;
+		margin: 0 auto;
+		width:100%;
+	    max-width: 1200px;
+		text-align: center;
+		p {
+			font-family:$roboto;
+		}
+	}
+	h1 {
+		font-size:2.5em;
+		font-weight:bold;
+		color:$reliantaGreen;
+	    line-height: 1.125;
+	}
+}
+
+.services-processes {
+	.service-slides {
+	    background-color: #fff;
+    	.slick-dots {
+			display:none!important;
+			position: relative;
+			text-align: left;
+			left: -10px;
+			li {
+				p {
+					font-family:$roboto;
+				}
+				button:before {
+				    font-size: 10px;
+				    color: $reliantaGreen;
+				}
+			}
+		}
+		&.slick-slider {
+			margin-bottom:0;
+		}
+		.slide-copy {
+			width:100%;
+			float:left;
+            padding: 30px 30px 75px 30px;
+			p {
+				font-family:$roboto;
+			}
+			.section-title {
+				font-family:$roboto;
+				text-transform: uppercase;
+			}
+			h3 {
+				margin-top: 20px;
+			}
+		}
+		.slide-image {
+			width:100%;
+			float: left;
+			background-size: cover;
+			background-position:top;
+		    height: 250px;
+			img {
+				width:100%;
+			}
+		}
+	}
+						
+	.our-process {
+		display:none;
+		height: 100%;
+		float: left;
+		width: 100%;
+		display: block;
+		.process-image {
+			display:none;
+			float:right;
+			width:100%;
+			background-color: $reliantaGreen;
+			img {
+				float: right;
+				width: 100%;
+				clear:both;
+			}
+
+		}
+		.process-copy {
+			display:none;
+			width:100%;
+			float:left;
+	        padding: 30px 30px 50px 30px;
+            p {
+            	margin: 0;
+				font-family:$roboto;
+		    }
+	        h3 {
+        	    margin-top: 20px;
+	        }
+		}
+	}		
+}
+
+.updates-NimbleBusiness {
+    background-color: #EAECEF;
+    clear:both;
+	display: block;
+    width:100%;
+	float: left;
+    padding: 30px 20px 20px 20px;
+	.updates-section {
+	    max-width: 1200px;
+	    width: 100%;
+		margin: 0 auto;
+		span {
+		    padding: 0 0 20px 0;
+			display: block;
+		}
+	}
+    .updates-top {
+    	width:100%;
+		max-width: 1200px;
+		margin: 0 auto;
+	    display: block;
+	    .announcements {
+	    	float:left;
+	    	width:100%;
+	    	background-color: #ffffff;
+	    	flex-wrap: wrap;
+	    	margin-right: 25px;
+			float: left;
+			width: 100%;
+			background-color: #ffffff;
+			flex-wrap: wrap;
+			padding: 0px 20px;
+			width: 100%;
+	    	p {
+	    		margin:0;
+				font-family:$roboto;
+		 	}
+	    	img {
+	    		float:left;
+	    	}
+	    	.page-title {
+	    		line-height:1;
+	    	}
+	    	.default-content {
+	    	}
+	    }
+	    .twitter {
+	    	float:left;
+	    	width:100%;
+	    	flex-wrap: wrap;
+	    	background-color:$reliantaGreen;
+	    	color:#ffffff;
+	    	margin-top: 20px;
+	    	font-size: 17px;
+	    	padding: 20px;
+			font-weight: bold;
+	    	h4.widgettitle {
+				text-transform: uppercase;
+				font-size: 12px;
+				font-weight: bold;
+	    		margin: 0;
+	    		border-bottom:none;
+	    		background-image: url('../images/twitter-white.png');
+			    background-repeat: no-repeat;
+			    background-size: contain;
+		        padding-left: 35px;
+	    	}
+	    	.tweet-details {
+	    		display:none;
+	    	}	    	
+	    }
+    }
+
+    .updates-bottom {
+    	width:100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		clear: both;
+	    padding: 25px 0;
+    	.news-strategies {
+    		float:left;
+    		width:100%;
+    	    display: block;
+    	    & > div {
+	    	    min-height: 125px;
+		    }
+	    	.strategies {
+		    	background-color: #ffffff;
+    	        padding: 0px 20px;
+				margin-bottom: 20px;
+				margin-top: 20px;
+				width: 100%;
+	    	}
+			.news {
+				float: left;
+				width: 100%;
+				background-color: #ffffff;
+				flex-wrap: wrap;
+				padding: 0px 20px;
+				margin-bottom: 20px;
+				margin-top: 20px;
+				width: 100%;
+	    	}
+    	    .date {
+    	    	color: $reliantaDarkGray;
+    	    	text-transform:uppercase;
+    	    	display:none;
+    	    }
+    	}
+    	.events {
+    		float:left;
+		    width:100%;
+	    	background-color: $reliantaDarkBlue;
+	    	margin-right: 25px;
+	        padding: 20px;
+	    	.section-title {
+	    		color:#ffffff;
+	    	}
+	    	.full-events{
+    		    padding-top: 20px;
+    		    h3 {
+    		    	font-size: 18px;
+    		    }
+	    	}
+    	}
+    }
+    .query-copy {
+        padding-top: 10px;
+        display: block;
+	    .page-title {
+    	    font-size: 17px;
+    	    a {
+				color: $reliantaGreen;
+				font-weight: bold;
+				margin: 0;    	    	
+    	    }
+	    }
+
+	    .default-content {
+	    	display:none;
+	    }
+    }
+    .query-img {
+		display:none;
+    }
+	.date {
+		font-size: 12px;
+		color:#fff;
+		text-transform:uppercase;
+		font-weight: normal;
+	}
+}
+
+.client-testimonials {
+	background-color: $reliantaDarkBlue;
+	float:left;
+	width:100%;
+	.testimonial {
+		width:100%;
+		max-width: 1200px;
+		margin: 0 auto;
+	    padding: 30px 20px;
+		background-image: url("../images/NimbleBusiness-logo-overlay.png");
+		background-repeat: no-repeat;
+		background-position: right;
+	    background-size: contain;
+	    p {
+	    	color:#fff;
+	    	font-family: $roboto;
+	    	font-weight:300;
+	    	font-size:22px;
+	    }
+	    h3 {
+	    	font-size:23px;      
+	    }
+	}
+}	
+
+.our-partners {
+	margin: 0 auto;
+	padding: 60px 0;
+	.partners-section {
+	    margin: 0 auto;
+		max-width:1200px;
+		width:100%;
+		padding: 20px;
+		clear: both;
+		text-align:center;
+		.partner-copy {
+			float: left;
+			width:100%;
+			text-align:left;
+			p {
+			    width: 100%;
+				font-family:$roboto;
+			}
+			h3 {
+			    font-size: 22px;
+			    margin-top: 10px;
+			}
+		}
+		.partner-logos {
+			width:100%;
+			float: left;   
+		 	margin: 50px 0;
+			img {
+			    margin: 10px;
+			    width: 40%;
+			    height: 10%;
+			}
+		}
+	}
+}
+
+
+.section-title {
+	text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: $reliantaMediumGray;
+}
+
+.white {
+	color:#fff;
+}
+.gray {
+	color: $reliantaDarkGray;
+}
+
+/** About Page Styles **/
+.about {
+	.primary-content {
+		background-color:#ffffff;
+		float: left;
+		width: 100%;
+		.primary-section {
+			text-align:left;
+			width:100%;
+			p {
+				font-family:$roboto;
+			}
+		}
+		.copy-left{
+			float:left;
+			width:42%;
+		}
+		.copy-right{
+			float:right;
+			width:42%;
+		}
+	}
+	.leadership-content {
+		background-color:$reliantaLightGray;
+		float: left;
+		width: 100%;
+		padding: 60px 30px;
+		text-align: center;
+		span.section-title {
+	 		float:none;
+	 	}
+	}
+	.leadership-section {
+		margin: 0 auto;
+		width: 100%;
+		clear:both;
+		padding:0;
+		.partner {
+			max-width: 375px;
+			margin: 30px auto 0 auto;
+			display: block;
+			background-color: #ffffff;
+			&.team-excerpt {
+				background-color:$reliantaDarkBlue;
+				color:#ffffff;
+				font-size: 26px;
+				padding: 20px;
+				a {
+					text-decoration:none;
+					color:$reliantaGreen;
+					text-transform: uppercase;
+					font-size: 16px;
+					font-weight: bold;
+					margin-top: 20px;
+					display: block;
+				}
+				p {
+				    margin: 0;
+					font-family:$roboto;
+				}
+			}
+			img {
+				max-width:375px;
+				width:100%;
+			}
+			h3 {
+				margin:0;
+				padding:0;
+				padding-left: 20px;
+			}
+			.title {
+				margin:0;
+				padding-left: 20px;
+				margin-bottom:20px;
+				text-transform: uppercase;
+				font-size: 14px;
+				font-family: "Ubuntu", sans-serif;
+				font-weight: bold;
+				color:$reliantaMediumGray;
+			}
+		}
+		.section-title {
+			float:left;
+			width:100%;
+		}
+	}
+	.our-partners {
+		float: left;
+		width: 100%;
+	}
+}
+
+/** Services Page Styles **/
+
+.service-content {
+	.service-copy {
+		width:100%;
+		padding: 60px;
+	}
+	.service-image {
+		height: 400px;
+		width:100%;
+		background-position: center;
+		background-size: cover;
+	}
+}
+
+/** Contact Page Styles **/
+
+.contact-content {
+	.contact-form {
+	    padding: 30px 0;
+	    .wdform-field {
+	    	width:100%!important;
+	    	max-width:100%;
+	    	display:block;
+	    }
+    	.wdform-label {
+			text-transform: uppercase;
+			font-size: 14px;
+			font-family: "Ubuntu", sans-serif;
+			font-weight: bold;
+			color:$reliantaMediumGray;
+		    line-height: 23px;
+    	}
+    	.wdform-label-section {
+			display: block;
+			float: left;
+			width:100%;
+    	}
+    	.wdform-required {
+		    padding-left: 3px;
+    	}
+    	input[type="text"] {
+    		height: 50px;
+    		border:none;
+    		max-width:100%;
+    	} 
+    	.input_deactive {
+    		background-color:$reliantaLightGray;
+    		border-radius: 3px;
+       	}
+       	.input_active {
+    		border-radius: 3px;
+    	}
+    	.wdform_row {
+    		.ui-sortable-handle {
+    			width: 33%;
+			    float:left;
+    		}
+    	}
+    	.wdform_column {
+    		width: 100%;
+    		float:left;
+    		& > div {
+    			width:100%;	
+    			float:left;
+    			&:nth-last-child(-n+2) {
+    				width:100%;
+				    margin-top: 20px;
+    			}
+    			&:nth-child(-n+2) {
+				    margin-right: 35px;
+    			}
+    			.wdform-label-section {
+    				width: 100%!important;
+    				display: inline;
+    			}
+    			.wdform-element-section {
+    				width: 100%!important;
+    				display: inline;
+    			}
+    		}
+    		div[type="type_textarea"] {
+    			width: 100%!important;
+    			display:inline
+    		}
+    	}
+    	.button-submit {
+		    padding: 3px 75px;
+		    height:inherit;
+		    background-color: white;
+		    color:$reliantaGreen;
+		    font-family:$ubuntu;
+	        border: 1px solid $reliantaGreen;
+	        &:hover {
+	        	background:transparent;
+	        }
+    	}
+    	.wdform_page {
+    		padding:0;
+		    padding-top: 15px;
+		}
+    	textarea {
+    		border:none;
+		    padding: 5px 10px !important;
+    	}
+    	input[type="text"]:focus {
+   			border: 1px solid $reliantaGreen;
+   		}
+   		.warning, .error {
+			background-color: #FFFFFF;
+			border: 1px solid $reliantaGreen;
+			margin-bottom: 10px;
+			color: $reliantaGreen;
+			padding: 5px;
+   		}
+	}
+
+	.column-section {
+		background-color:$reliantaLightGray;
+		width: 100%;
+		float: left;
+		padding: 60px 0;
+		font-family:$ubuntu;
+		.three-column {
+			a {				
+				text-transform: uppercase;
+				font-size: 13px;
+				font-weight: bold;
+				color:$reliantaGreen;
+				text-decoration:none;
+				&.map {
+					padding-top:20px;
+					display:block;
+				}
+			}
+			p{
+				padding:0;
+				margin:0;
+			}
+			.col {
+				float:left;
+				width: 100%;
+				margin: 20px 0;
+				text-align: center;
+				.col-content {
+					margin:0 auto;
+					width:100%;
+					margin: 0;
+					padding: 0;
+				}
+			}
+			a.contact-social {
+				background-repeat: no-repeat;
+				background-position: left;
+			    padding-left: 30px;
+			    margin: 10px 0;
+				&.twitter {
+					background-image: url("../images/twitter-contact.png");
+				}
+				&.facebook {
+					background-image: url("../images/facebook-contact.png");
+				}
+				&.linkedin {
+					background-image: url("../images/linkedin-contact.png");
+				}
+			}
+		}
+		.section-title {
+		    padding-bottom: 20px;
+		    letter-spacing: 1.5px;
+		}
+	}
+}
+
+/** Blog Page Styles **/
+
+.blog {
+	
+}
+
+/** Careers Page Styles **/
+
+.careers {
+	
+}
+
+/** Work Page Styles **/
+
+.work {
+	
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+	background-color: $reliantaGreen;
+	clear:both;
+	width:100%;
+	color:#fff;
+	float:left;
+	.mobile-copyright {
+		width:100%;
+		text-align:center;
+		padding-bottom:60px;
+	}
+	.footer-section {
+		max-width: 1200px;
+		margin: 0 auto;
+	    padding: 0 30px;
+		padding-top: 30px;
+	    text-align: center;
+    	.copyright {
+		    display:none;
+		}
+		.footer-left {
+			float: left;
+			width: 100%;
+
+		}
+		.footer-right {
+			width:100%;
+			p {
+			    width: 250px;
+				margin: 0 auto;	
+			}
+			h3 {
+				display:none;
+			}
+			a {
+				text-decoration:none;
+			}
+			.footer-social {
+				margin: 30px 0;
+			   	& > div {
+			    	display: inline;
+			    	margin: 0 10px;
+			    }
+			}
+		}
+		h3 {
+			color:#fff;
+		}
+	}
+}

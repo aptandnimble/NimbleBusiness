@@ -1,0 +1,531 @@
+/******************************************************************
+Site Name: NimbleBusiness.com	
+Author: Dean Miranda
+
+Stylesheet: Super Large Monitor Stylesheet
+
+******************************************************************/
+
+.wrap {
+	width: 100%;
+}
+.primary-content {
+	background-color: $reliantaLightGray;
+	width: 100%;
+	padding: 35px 0;
+	.primary-section {
+		margin: 0 auto;
+	 	max-width: 1200px;
+		text-align: center;
+	}
+	h1 {
+		font-size:2.5em;
+		font-weight:bold;
+		color:$reliantaGreen;
+		margin: 0;
+		margin-top: 35px;
+	}
+}
+.services-processes {
+	width: 100%;
+	float: left;
+	.service-slides {
+		background-color: #fff;
+		&.slick-slider {
+			margin-bottom:0;
+			.slick-dots {
+			    bottom: 10%;
+				left: 115px;
+				position:absolute;
+				display:block!important;
+			}
+		}
+		.slide-copy {
+			width:50%;
+			float:left;
+   			padding: 125px;
+   			max-height: 513px;
+			.section-title {
+				text-transform: uppercase;
+			}
+			h3 {
+		 	margin-top: 25px;
+			overflow: hidden;
+			max-height: 39px;
+			}
+		}
+		.slide-image {
+			width: 50%;
+			float:left;
+			background-size: cover;
+			background-position: center;
+			height: 500px;
+			img {
+				width:100%;
+			}
+		}
+	}
+						
+	.our-process {
+		height: 100%;
+		float: right;
+		width: 100%;
+		display: block;
+		.process-image {
+			display:inline;
+			float:left;
+			width:50%;
+			background-color: $reliantaGreen;
+			height: 500px;
+			padding: 100px 150px 0px 0px;
+			img {
+				float: right;
+				position: initial;
+				top: initial;
+				width: initial;
+			}
+
+		}
+		.process-copy {
+			display:inline;
+			width:50%;
+			float:right;
+			padding:125px;
+		}
+	}		
+}
+
+.updates-NimbleBusiness {
+	background-color: #EAECEF;
+	clear:both;
+	display: block;
+	width: 100%;
+	float: left;
+	padding: 80px 0;
+	.updates-section {
+		width: 1200px;
+		margin: 0 auto;
+		span {
+			padding: 0 0 30px 0;
+			display: block;
+		}
+	}
+    .updates-top {
+		width: 1200px;
+		margin: 0 auto;
+		display:flex;
+	    .announcements {
+	    	float:left;
+	    	width:57%;
+	    	background-color: #ffffff;
+	    	flex-wrap: wrap;
+	    	margin-right: 20px;
+	    	p {
+	    		margin:0;
+	    	}
+	    	img {
+	    		float:left;
+	    	}
+	    	.page-title {
+	    		line-height:1;
+	    	}
+	    }
+	    .twitter {
+	    	float:left;
+	    	width:40%;
+	    	flex-wrap: wrap;
+	    	background-color:$reliantaGreen;
+	    	color:#ffffff;
+	    	margin-top:0;
+	    	h4.widgettitle {
+	    		font-size:16px;
+			    padding-left: 45px;
+	    	}
+	    	.widget {
+	    		margin:0;
+	    		padding:0;
+	    	}
+	    	.latest-tweets {
+	    		ul {
+	    			margin: 0;
+	    			.tweet-text {
+	    				margin: 0;
+	    				margin-top: 10px;
+	    			}
+	    		}	
+	    	}
+	    }
+    }
+
+    .updates-bottom {
+		width: 1200px;
+		margin: 0 auto;
+		clear: both;
+		padding: 20px 0;
+		display: flex;
+    	.news-strategies {
+    		float:left;
+    		width: 58%;
+	    	flex-wrap: wrap;
+	    	.strategies {
+		    	background-color: #ffffff;
+		    	padding:0;
+		    	float: left;
+		    	margin-top:0;
+	    	}
+			.news {
+				background-color: #ffffff;
+				padding:0;
+			}
+			img {
+				display: flex;
+			}
+    	    .date {
+    	    	color: $reliantaDarkGray;
+    	    	text-transform:uppercase;
+    	    }
+    	}
+    	.events {
+    		float:left;
+		    width: 39%;
+	    	background-color: $reliantaDarkBlue;
+	    	margin-right: 20px;
+	    	flex-wrap: wrap;
+    	    padding: 25px;
+    	    .date {
+    	    	text-transform:uppercase;
+    	    	font-weight: normal;
+    	    }
+	    	.section-title {
+	    		color:#ffffff;
+	    	}
+	    	.full-events{
+    		    padding-top: 20px;
+	    	}
+    	}
+    }
+    .query-copy {
+	    display:block;
+        padding: 20px;
+	    .date {
+	    	display:block;
+	    }
+	    .default-content {
+	    	display:block;
+	    }
+    }
+    .query-img {
+		float: left;
+		margin-right: 20px;
+		width: 250px;
+		height: 250px;
+		background-size: cover;
+
+    }
+	.date {
+		font-size: 13px;
+		color:#fff;
+	}
+}
+
+.client-testimonials {
+	background-color: $reliantaDarkBlue;
+	float:left;
+	width:100%;
+	.testimonial {
+	    padding: 60px 0;
+	    p {
+	    	color:#fff;
+	    	font-family: $roboto;
+	    	font-weight:300;
+	    	font-size:30px;
+	    }
+	    h3 {
+	    	font-size:26px;      
+	    }
+	}
+}	
+
+.our-partners {
+	margin: 0 auto;
+	padding: 60px 0;
+	width: 100%;
+	float: left;
+	.partners-section {
+		padding: 60px 0;
+		.partner-copy {
+			float: left;
+			width: 46%;
+	    	margin-top: 80px;
+			p {
+			    width: 80%;
+			}
+		}
+		.partner-logos {
+			width: 54%;
+			float: left;
+			margin:0;
+		 	margin-bottom: 50px;
+			img {
+			    float: none;
+			    margin: 10px;
+			    text-align:center;		
+			}
+		}
+	}
+}
+
+
+.section-title {
+	text-transform: uppercase;
+	font-size: 16px;
+	font-family: $ubuntu; 
+	font-weight: bold;
+	margin-top: 0;
+	display: block;
+}
+
+/** About Page Styles **/
+.about {
+	.leadership-section {
+		.partner {
+			float: left;
+			margin-right: 20px;
+			&.team-excerpt {
+				height: 461px;
+			}
+		}
+	}
+}
+
+
+/** Services Page Styles **/
+
+.service-content {
+	.service-copy {
+		padding: 120px;
+	}
+}
+
+
+/** Contact Page Styles **/
+
+.contact-content {
+	.contact-form {
+	    padding: 30px 0;
+    	.wdform-label {
+			text-transform: uppercase;
+			font-size: 14px;
+			font-family: "Ubuntu", sans-serif;
+			font-weight: bold;
+			color:$reliantaMediumGray;
+		    line-height: 23px;
+    	}
+    	.wdform-required {
+		    padding-left: 3px;
+    	}
+    	input[type="text"] {
+    		height: 50px;
+    		border:none;
+    	} 
+    	.input_deactive {
+    		background-color:$reliantaLightGray;
+    		border-radius: 3px;
+       	}
+       	.input_active {
+    		border-radius: 3px;
+    	}
+    	.wdform-element-section {
+    		min-width: 350px!important;
+    	}
+    	.wdform_row {
+    		.ui-sortable-handle {
+    			width: 33%;
+			    float:left;
+    		}
+    	}
+    	.wdform_column {
+    		width: 100%;
+    		float:left;
+    		& > div {
+			    width: 31%;
+    			float:left;
+    			&:nth-last-child(-n+2) {
+    				width:100%;
+				    margin-top: 20px;
+    			}
+    			&:nth-child(-n+2) {
+				    margin-right: 35px;
+    			}
+    			.wdform-label-section {
+    				width: 100%!important;
+    				display: inline;
+    			}
+    			.wdform-element-section {
+    				width: 100%!important;
+    				display: inline;
+    			}
+    		}
+
+    		div[type="type_textarea"] {
+    			width: 100%!important;
+    			display:inline
+    		}
+    	}
+    	.button-submit {
+		    padding: 3px 75px;
+		    height:inherit;
+		    background-color: white;
+		    color:$reliantaGreen;
+	        border: 1px solid $reliantaGreen;
+	        &:hover {
+	        	background:transparent;
+	        }
+    	}
+    	.wdform_page {
+    		padding:0;
+		    padding-top: 15px;
+		}
+    	textarea {
+    		border:none;
+		    padding: 5px 10px !important;
+    	}
+    	input[type="text"]:focus {
+   			border: 1px solid $reliantaGreen;
+   		}
+   		.warning, .error {
+			background-color: #FFFFFF;
+			border: 1px solid $reliantaGreen;
+			margin-bottom: 10px;
+			color: $reliantaGreen;
+			padding: 5px;
+   		}
+	}
+
+	.column-section {
+		background-color:$reliantaLightGray;
+		width: 100%;
+		float: left;
+		padding: 60px 0;
+		font-family:$ubuntu;
+		.three-column {
+			a {				
+				text-transform: uppercase;
+				font-size: 16px;
+				font-weight: bold;
+				color:$reliantaGreen;
+				text-decoration:none;
+				&.map {
+					padding-top:20px;
+					display:block;
+				}
+			}
+			p{
+				padding:0;
+				margin:0;
+			}
+			.col {
+				float:left;
+				width:33%;
+				margin:0;
+				.col-content {
+					margin:0 auto;
+					width:100%;
+					margin: 0;
+					padding: 0;
+				}
+			}
+
+			.contact-social {
+				background-repeat: no-repeat;
+				background-position: left;
+			    background-size: contain;
+			    padding-left: 50px;
+			    margin: 10px 0;
+				&.twitter {
+					background-image: url("../images/twitter-contact.png");
+				}
+				&.facebook {
+					background-image: url("../images/facebook-contact.png");
+				}
+				&.linkedin {
+					background-image: url("../images/linkedin-contact.png");
+				}
+			}
+		}
+		.section-title {
+		    padding-bottom: 20px;
+		    letter-spacing: 1.5px;
+		}
+	}
+}
+.footer {
+	background-color: $reliantaGreen;
+	clear:both;
+	width:100%;
+	color:#fff;
+	.copyright {
+		max-width:1200px;
+		margin:0 auto;
+		padding-bottom:30px;
+	}
+	.cta {
+		float: left;
+		margin-top: 30px;
+	}
+	.mobile-copyright {
+	   display:none;
+	}
+	.footer-section {
+		width: 1200px;
+		margin: 0 auto;
+	    display: flex;
+	    text-align: left;
+		.footer-left {
+			float: left;
+			width: 100%;
+			.copyright {
+				display: block;
+				margin-top: 15px;
+				float: left;
+				width: 100%;
+			}
+
+		}
+		.footer-right {
+			width: 100%;
+			padding-left:200px;
+			h2 {
+				font-size:18px;
+			}
+			h3 {
+				display:block;
+			}
+			.title {
+				font-weight:normal;
+				margin-top:20px;
+				margin:0;
+				padding:0;
+			}
+			p {
+				width: 100%;
+			}
+			a {
+				text-decoration:none;
+			}
+			.footer-number {
+				float: left;
+			    padding-right: 20px;
+				margin: 20px 0;
+			}
+			.footer-social {
+			    margin:0;
+			    padding: 10px;
+			}
+		}
+		h3 {
+			color:#fff;
+		}
+	}
+}
+

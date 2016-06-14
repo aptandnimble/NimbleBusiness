@@ -1,0 +1,78 @@
+/******************************************************************
+Site Name: NimbleBusiness.com
+Author: Dean Miranda
+
+Stylesheet: Desktop Stylsheet
+
+******************************************************************/
+
+.wrap {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.header {
+	&.hero {
+		background-position: 0 -400px;
+	    height: 734px;
+	    background-size: cover; 
+	    background-position: center;
+	    width:100%;
+	}
+	.banner {
+	    margin-top: 100px;
+	}
+}
+
+.services-processes {
+	.our-process {
+		height: 100%;
+		float: right;
+		width: 100%;
+		display: block;
+		.process-image {
+			display:inline;
+			float:left;
+			width:50%;
+			background-color: $reliantaGreen;
+			height: 500px;
+		    padding: 100px 90px 0px 0px;
+			img {
+				float: right;
+				position: initial;
+				top: initial;
+				width: initial;
+			}
+		}
+		.process-copy {
+			display:inline;
+			width:50%;
+			float:right;
+	        padding: 115px 30px;
+		}
+	}		
+}
+
+
+/** Services Page Styles **/
+
+
+.service-content {
+	.service-copy {
+		float:left;
+		width:50%;
+	    padding: 90px;
+	    height:400px;
+		&.right {
+			float: right;
+		}
+	}
+	.service-image {
+		float:left;
+		height: 400px;
+		width: 50%;
+		background-position: center;
+		float: left;
+		background-size: cover;
+	}
+}
+

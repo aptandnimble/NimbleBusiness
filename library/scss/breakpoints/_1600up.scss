@@ -1,0 +1,21 @@
+/******************************************************************
+Site Name: NimbleBusiness.com
+Author: Dean Miranda
+
+Stylesheet: Super Large Monitor Stylesheet
+
+
+******************************************************************/
+
+.wrap {
+	margin: 0 auto;
+}
+.header {
+	&.hero {
+		background-position: 0 -400px;
+	    background-size: cover;
+    	background-position: 50% 70%;
+	    width: 100%;
+	}
+}
+  

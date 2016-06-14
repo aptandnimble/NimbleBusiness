@@ -1,0 +1,335 @@
+/******************************************************************
+Site Name: NimbleBusiness.com
+Author: Dean Miranda
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+s
+******************************************************************/
+
+.wrap {
+	width: 760px;
+}
+.header {
+	&.hero {
+		background-position: 0;
+		&.mobile-header {
+		    min-height: 700px;
+		    background-color:transparent;
+		    border-bottom: none;
+		}
+	}
+}
+
+#logo {
+	margin: 1em 0;
+}
+
+#inner-header {
+	&.mobile-inner {
+		background-color:transparent;
+	    min-height: 700px;
+	}
+	.mobile-logo {
+		position:relative;
+	}
+	.mobile-banner {
+		display:block;
+	}
+}
+/*********************
+NAVIGATION STYLES
+*********************/
+
+.burger {
+	display:none;
+}
+.header-social {
+	display:none;
+	&.mobile-social {
+	    display: none;
+	}
+}
+.nav {
+	display:block;
+	float: right;
+	margin-top: 3em;
+	border: 0;
+	position:relative;
+	background-color: transparent;
+	text-align:left;
+	&.mobile-nav {
+		display: block;
+		position: relative;
+		background-color: transparent;
+    	width: inherit;
+	    margin-top: 3em;
+		margin-bottom: 30px;
+		text-align: center; 
+	 }
+	ul {
+		background:$black;
+		margin-top:0;
+	}
+	li {
+		float: left;
+		position: relative;
+		a {
+			border-bottom: 0;
+			&:hover, &:focus {
+				color: $white;
+				text-decoration: underline;
+			}
+		}
+
+		&:first-child {}
+		&:last-child {}
+
+		ul.sub-menu,
+		ul.children {
+			margin-top: 0;
+			border: 1px solid #ccc;
+			border-top: 0;
+			position: absolute;
+			visibility: hidden;
+			z-index: 8999;
+			li {
+				a {
+					padding-left: 10px;
+					border-right: 0;
+					display: block;
+					width: 180px;
+					border-bottom: 1px solid #ccc;
+
+					&:hover,
+					&:focus {}
+
+					&:link {}
+				}
+
+				&:first-child {}
+
+				&:last-child {
+
+					a {
+						border-bottom: 0;
+					}
+				}
+
+				/*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+				ul {
+					top:0;
+					left:100%;
+				}
+			}
+
+			/* highlight sub-menu current page */
+			li.current-menu-item,
+			li.current_page_item,
+			li.current_page_ancestor {
+				a {}
+			}
+		}
+
+		/* showing sub-menus */
+		&:hover > ul {
+			top: auto;
+			visibility:visible;
+		}
+
+	} /* end .menu ul li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current_page_ancestor {
+		a {}
+	}  /* end current highlighters */
+
+} /* end .nav */
+
+/*********************
+CONTENT STYLES
+*********************/
+
+.primary-content {
+    padding: 35px 30px;
+}
+.services-processes {
+	.services {
+		.slide-copy {
+			width:50%;
+			padding: 60px 30px 0 30px;
+			h3 {
+			    margin-top: 25px;
+			}
+		}
+		.slide-image {
+			width:50%;
+		    height: 400px;
+			img {
+				height:100%;
+			}
+		}
+	}
+	.our-process {
+		.process-copy {
+			width: 50%;
+			float:right;
+			padding: 60px 30px 50px 30px;
+			h3 {
+				margin-top: 25px;
+			}
+		} 
+		.process-image {
+			width: 50%;
+			height:500px;
+			img {
+				top: 20%;
+				position: relative;
+			}
+		}
+	}
+}
+
+.updates-NimbleBusiness {
+	.query-img {
+		display:inline;
+	    float: left;
+		margin-right: 25px;
+	    width: 33%;
+	    float: left;
+	    margin-right: 20px;
+	    width: 250px;
+	    height: 250px;
+		background-size: cover;
+	}
+	.query-copy {
+		display: block;
+		padding: 15px 0;
+		.page-title {
+			padding: 5px 0;
+			font-size:28px;
+		}
+		.date {
+			color: $reliantaDarkGray;
+			padding: 0;
+			margin:0;
+		}
+		.default-content {
+			display: inline;
+		}
+		span {
+			position: relative;
+		}
+		p {
+			display: block;
+			margin: 0;
+		}
+	}
+	.updates-top {
+	    .announcements {
+	    	padding:0;
+	    }
+	}
+	.updates-bottom {
+		.news-strategies {
+			.date {
+				display:block;
+			    padding: 0;
+			    margin:0;
+			}
+			.news {
+					padding:0;
+					margin-bottom:0;
+			}
+		}
+	}
+}
+
+
+.our-partners {
+	.partners-section {
+		.partners-logos {
+			img:nth-child(even) {
+				float:right;
+			}
+		}
+	}
+}
+
+/** Contact Page **/
+
+.contact-content {
+	.column-section {
+		background-color:$reliantaLightGray;
+		width: 100%;
+		float: left;
+		padding: 60px 0;
+		font-family:$ubuntu;
+		.three-column {
+			a {				
+				text-transform: uppercase;
+				font-size: 13px;
+				font-weight: bold;
+				color:$reliantaGreen;
+				text-decoration:none;
+				&.map {
+					padding-top:20px;
+					display:block;
+				}
+			}
+			p{
+				padding:0;
+				margin:0;
+			}
+			.col {
+				float:left;
+				width: 30%;
+				margin: 0 10px;
+				text-align: left;
+				.col-content {
+					margin:0 auto;
+					width:100%;
+					margin: 0;
+					padding: 0;
+				}
+			}
+			.contact-social {
+				background-repeat: no-repeat;
+				background-position: left;
+			    padding-left: 30px;
+			    margin: 10px 0;
+				&.twitter {
+					background-image: url("../images/twitter-contact.png");
+				}
+				&.facebook {
+					background-image: url("../images/facebook-contact.png");
+				}
+				&.linkedin {
+					background-image: url("../images/linkedin-contact.png");
+				}
+			}
+		}
+		.section-title {
+		    padding-bottom: 20px;
+		    letter-spacing: 1.5px;
+		}
+	}
+}
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer-social {
+   	& > div {
+    	display: inline;
+    	margin: 0 10px;
+    }
+}
+
